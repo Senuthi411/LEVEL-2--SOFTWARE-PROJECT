@@ -1,0 +1,337 @@
+{
+  "routes": [
+    {
+      "route": "/dashboard",
+      "broken": []
+    },
+    {
+      "route": "/assignments",
+      "broken": []
+    },
+    {
+      "route": "/assignments/new",
+      "broken": []
+    },
+    {
+      "route": "/assignments/assigned",
+      "broken": []
+    },
+    {
+      "route": "/assignments/in-progress",
+      "broken": []
+    },
+    {
+      "route": "/evidence",
+      "broken": []
+    },
+    {
+      "route": "/evidence/observation",
+      "broken": []
+    },
+    {
+      "route": "/evidence/metadata",
+      "broken": []
+    },
+    {
+      "route": "/evidence/revision",
+      "broken": []
+    },
+    {
+      "route": "/review",
+      "broken": []
+    },
+    {
+      "route": "/review/observation",
+      "broken": []
+    },
+    {
+      "route": "/review/verify",
+      "broken": []
+    },
+    {
+      "route": "/review/flag",
+      "broken": []
+    },
+    {
+      "route": "/review/correction",
+      "broken": []
+    },
+    {
+      "route": "/corrections",
+      "broken": []
+    },
+    {
+      "route": "/corrections/detail",
+      "broken": []
+    },
+    {
+      "route": "/corrections/compare",
+      "broken": []
+    },
+    {
+      "route": "/corrections/approve",
+      "broken": []
+    },
+    {
+      "route": "/corrections/reject",
+      "broken": []
+    },
+    {
+      "route": "/referrals/new",
+      "broken": []
+    },
+    {
+      "route": "/referrals",
+      "broken": []
+    },
+    {
+      "route": "/quarantine",
+      "broken": []
+    },
+    {
+      "route": "/quarantine/detail",
+      "broken": []
+    },
+    {
+      "route": "/quarantine/decide",
+      "broken": []
+    },
+    {
+      "route": "/history",
+      "broken": []
+    },
+    {
+      "route": "/profile",
+      "broken": []
+    },
+    {
+      "route": "/review/flagged",
+      "broken": []
+    },
+    {
+      "route": "/corrections/requested",
+      "broken": []
+    },
+    {
+      "route": "/corrections/approved",
+      "broken": []
+    },
+    {
+      "route": "/corrections/applied",
+      "broken": []
+    },
+    {
+      "route": "/quarantine/ingested",
+      "broken": []
+    },
+    {
+      "route": "/quarantine/retry",
+      "broken": []
+    },
+    {
+      "route": "/quarantine/retried",
+      "broken": []
+    },
+    {
+      "route": "/demo",
+      "broken": []
+    },
+    {
+      "route": "/login",
+      "broken": []
+    },
+    {
+      "route": "/assignments/submitted",
+      "broken": []
+    },
+    {
+      "route": "/assignments/completed",
+      "broken": []
+    },
+    {
+      "route": "/assignments/edit",
+      "broken": []
+    },
+    {
+      "route": "/assignments/cancel",
+      "broken": []
+    },
+    {
+      "route": "/assignments/cancelled",
+      "broken": []
+    },
+    {
+      "route": "/assignments/ASG-002",
+      "broken": []
+    },
+    {
+      "route": "/assignments/ASG-003",
+      "broken": []
+    },
+    {
+      "route": "/assignments/ASG-004",
+      "broken": []
+    },
+    {
+      "route": "/assignments/ASG-005",
+      "broken": []
+    },
+    {
+      "route": "/assignments/ASG-006",
+      "broken": []
+    },
+    {
+      "route": "/assignments/ASG-007",
+      "broken": []
+    },
+    {
+      "route": "/screen/52-72",
+      "broken": []
+    },
+    {
+      "route": "/screen/52-555",
+      "broken": []
+    },
+    {
+      "route": "/screen/52-1038",
+      "broken": []
+    },
+    {
+      "route": "/screen/52-1521",
+      "broken": []
+    },
+    {
+      "route": "/screen/52-2004",
+      "broken": []
+    },
+    {
+      "route": "/screen/52-2487",
+      "broken": []
+    },
+    {
+      "route": "/screen/122-820",
+      "broken": []
+    },
+    {
+      "route": "/screen/52-2970",
+      "broken": []
+    },
+    {
+      "route": "/screen/52-3167",
+      "broken": []
+    },
+    {
+      "route": "/screen/52-3364",
+      "broken": []
+    },
+    {
+      "route": "/screen/52-3562",
+      "broken": []
+    },
+    {
+      "route": "/screen/52-3760",
+      "broken": []
+    },
+    {
+      "route": "/screen/128-74",
+      "broken": []
+    },
+    {
+      "route": "/screen/123-70",
+      "broken": []
+    },
+    {
+      "route": "/screen/128-3429",
+      "broken": []
+    },
+    {
+      "route": "/screen/289-135",
+      "broken": []
+    },
+    {
+      "route": "/screen/52-3958",
+      "broken": []
+    },
+    {
+      "route": "/screen/52-4303",
+      "broken": []
+    },
+    {
+      "route": "/screen/52-4648",
+      "broken": []
+    },
+    {
+      "route": "/screen/52-4993",
+      "broken": []
+    },
+    {
+      "route": "/screen/52-5338",
+      "broken": []
+    },
+    {
+      "route": "/screen/47-1053",
+      "broken": []
+    },
+    {
+      "route": "/screen/41-690",
+      "broken": []
+    },
+    {
+      "route": "/screen/150-74",
+      "broken": []
+    },
+    {
+      "route": "/dashboard/collapsed",
+      "broken": []
+    },
+    {
+      "route": "/evidence/revisions",
+      "broken": []
+    },
+    {
+      "route": "/evidence/location",
+      "broken": []
+    },
+    {
+      "route": "/evidence/history",
+      "broken": []
+    },
+    {
+      "route": "/screen/206-140",
+      "broken": []
+    },
+    {
+      "route": "/screen/206-422",
+      "broken": []
+    },
+    {
+      "route": "/screen/206-704",
+      "broken": []
+    },
+    {
+      "route": "/screen/206-986",
+      "broken": []
+    },
+    {
+      "route": "/screen/122-1046",
+      "broken": []
+    },
+    {
+      "route": "/screen/150-306",
+      "broken": []
+    },
+    {
+      "route": "/screen/128-1412",
+      "broken": []
+    },
+    {
+      "route": "/screen/31-1283",
+      "broken": []
+    },
+    {
+      "route": "/screen/31-2",
+      "broken": []
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,50 @@
+{
+  "results": [
+    {
+      "route": "/dashboard",
+      "images": 32,
+      "broken": []
+    },
+    {
+      "route": "/assignments",
+      "images": 16,
+      "broken": []
+    },
+    {
+      "route": "/assignments/new",
+      "images": 18,
+      "broken": []
+    },
+    {
+      "route": "/assignments/assigned",
+      "images": 18,
+      "broken": []
+    },
+    {
+      "route": "/assignments/in-progress",
+      "images": 18,
+      "broken": []
+    },
+    {
+      "route": "/evidence",
+      "images": 49,
+      "broken": []
+    },
+    {
+      "route": "/evidence/observation",
+      "images": 38,
+      "broken": []
+    },
+    {
+      "route": "/evidence/metadata",
+      "images": 26,
+      "broken": []
+    },
+    {
+      "route": "/evidence/revision",
+      "images": 38,
+      "broken": []
+    }
+  ],
+  "errors": []
+}
