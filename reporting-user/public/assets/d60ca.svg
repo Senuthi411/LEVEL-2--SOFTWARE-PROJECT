@@ -1,0 +1,19 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1436" height="600" viewBox="0 0 1436 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="plot" clip-path="url(#clip0_0_49)">
+<path id="Vector" d="M0 600H1436" stroke-width="2" stroke="#E1E8E2"/>
+<path id="Vector_2" d="M0 480H1436" stroke-width="2" stroke="#E1E8E2"/>
+<path id="Vector_3" d="M0 360H1436" stroke-width="2" stroke="#E1E8E2"/>
+<path id="Vector_4" d="M0 240H1436" stroke-width="2" stroke="#E1E8E2"/>
+<path id="Vector_5" d="M0 120H1436" stroke-width="2" stroke="#E1E8E2"/>
+<path id="Vector_6" d="M0 0H1436" stroke-width="2" stroke="#E1E8E2"/>
+<path id="Vector_7" d="M207.5 160H151.5C148.186 160 145.5 164.925 145.5 171V589C145.5 595.075 148.186 600 151.5 600H207.5C210.814 600 213.5 595.075 213.5 589V171C213.5 164.925 210.814 160 207.5 160Z" fill="#2E7D32"/>
+<path id="Vector_8" d="M566.5 120H510.5C507.186 120 504.5 122.442 504.5 125.455V594.545C504.5 597.558 507.186 600 510.5 600H566.5C569.814 600 572.5 597.558 572.5 594.545V125.455C572.5 122.442 569.814 120 566.5 120Z" fill="#2E7D32"/>
+<path id="Vector_9" d="M925.5 240H869.5C866.186 240 863.5 241.919 863.5 244.286V595.714C863.5 598.081 866.186 600 869.5 600H925.5C928.814 600 931.5 598.081 931.5 595.714V244.286C931.5 241.919 928.814 240 925.5 240Z" fill="#2E7D32"/>
+<path id="Vector_10" d="M1284.5 560H1228.5C1225.19 560 1222.5 560.64 1222.5 561.429V598.571C1222.5 599.36 1225.19 600 1228.5 600H1284.5C1287.81 600 1290.5 599.36 1290.5 598.571V561.429C1290.5 560.64 1287.81 560 1284.5 560Z" fill="#2E7D32"/>
+</g>
+<defs>
+<clipPath id="clip0_0_49">
+<rect width="1436" height="600" fill="white"/>
+</clipPath>
+</defs>
+</svg>

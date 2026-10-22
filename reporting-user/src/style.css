@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@theme { --font-sans: Inter, Arial, sans-serif; }
+body { margin: 0; background: #f4f7f3; color: #1f2a24; }
+button,a,[role=button] { cursor: pointer; }
+button:focus-visible,a:focus-visible,input:focus-visible { outline: 5px solid #85b84a; outline-offset: 4px; }
+.design-viewport { width: 3840px; height: 2160px; transform-origin: top left; }
+.design-viewport > div { width: 100%; height: 100%; }
+.overlay { position: fixed; inset: 0; display: grid; place-items: center; background: #12351f66; z-index: 10; padding: 24px; }
+.dialog { background: white; border-radius: 16px; padding: 28px; width: min(580px,100%); box-shadow: 0 12px 60px #12351f33; }
+.dialog h2 { font-size: 24px; font-weight: 700; margin-bottom: 16px; }
+.dialog button,.dialog a { display: block; padding: 10px 14px; border: 1px solid #c5cec8; border-radius: 8px; margin-top: 10px; }
+.dialog input { width: 100%; padding: 12px; border: 1px solid #c5cec8; border-radius: 8px; }
+.reporting-layout [data-name^="Nav /"] { background: transparent; }
+.reporting-layout [data-name^="Nav /"] p { color: #c9dcce; font-weight: 500; }
+.reporting-layout [data-active="true"] { background: #2a5c38; }
+.reporting-layout [data-active="true"] p { color: white; font-weight: 600; }
+.report-table { width: 100%; border: 2px solid #e1e8e2; border-collapse: separate; border-spacing: 0; border-radius: 20px; overflow: hidden; text-align: left; }
+.report-table th { background: #f4f7f0; color: #5b6b62; text-transform: uppercase; font-size: 22px; font-weight: 600; padding: 26px 20px; }
+.report-table td { padding: 30px 20px; border-top: 2px solid #edf1ed; }
+.report-table td:first-child { color: #1f5a2e; font-weight: 600; }
+.report-preview-table { font-size: 25px; }
+.report-preview-table th { font-size: 20px; padding: 24px 12px; }
+.report-preview-table td { padding: 26px 12px; }
+.report-field { display: flex; flex-direction: column; gap: 12px; font-size: 25px; font-weight: 500; }
+.report-field select { width: 100%; border: 2px solid #b8c4bc; border-radius: 12px; background: white; padding: 20px 26px; height: 80px; font-size: 28px; font-weight: 400; }
+.report-field select:disabled { background: #f1f5f1; color: #7c8b80; cursor: not-allowed; }
+.report-field select:focus-visible { outline: 5px solid #85b84a; }
