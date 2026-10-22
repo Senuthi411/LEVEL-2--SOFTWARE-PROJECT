@@ -1,0 +1,30 @@
+import {chromium,expect} from '@playwright/test';
+import {mkdir,writeFile} from 'node:fs/promises';
+await mkdir('artifacts',{recursive:true});
+const browser=await chromium.launch({channel:'msedge',headless:true});
+const page=await browser.newPage({viewport:{width:1920,height:1080},deviceScaleFactor:1});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));
+const results=[];
+for(const route of ['/dashboard','/assignments','/assignments/new','/assignments/assigned','/assignments/in-progress','/evidence','/evidence/observation','/evidence/metadata','/evidence/revision']){
+  await page.goto('http://127.0.0.1:5173/#'+route);await page.evaluate(()=>document.fonts.ready);
+  const images=await page.locator('img').evaluateAll(images=>images.map(img=>({src:img.getAttribute('src'),loaded:img.complete&&img.naturalWidth>0,width:img.getBoundingClientRect().width,height:img.getBoundingClientRect().height})));results.push({route,images:images.length,broken:images.filter(i=>!i.loaded||!i.width||!i.height)});
+  await page.screenshot({path:'artifacts/'+route.slice(1).replaceAll('/','-')+'.png'});
+}
+await page.goto('http://127.0.0.1:5173/#/dashboard');
+await page.getByRole('link',{name:'Fieldwork Assignments',exact:true}).first().click();
+if(!page.url().endsWith('/assignments'))throw Error('Assignment navigation failed');
+await page.getByRole('tab',{name:'Assigned',exact:true}).click();
+await expect(page.locator('[data-name^="Row / ASG-"]')).toHaveCount(1);
+await page.getByRole('link',{name:'Create assignment',exact:true}).click();
+await page.getByRole('textbox',{name:'title',exact:true}).fill('Inspect test block');
+await page.getByRole('link',{name:'Assign task',exact:true}).click();
+if(!page.url().endsWith('/assignments/assigned'))throw Error('Create assignment failed');
+const record=await page.evaluate(()=>JSON.parse(localStorage.getItem('tealeaf-assignment')));
+if(record.title!=='Inspect test block')throw Error('Assignment was not saved');
+await page.getByRole('link',{name:'Back to list',exact:true}).click();
+await page.goBack();
+if(!page.url().endsWith('/assignments/assigned'))throw Error('Browser history failed');
+await writeFile('artifacts/verification.json',JSON.stringify({results,errors},null,2));
+console.log(JSON.stringify({results,errors},null,2));
+await browser.close();
+if(errors.length||results.some(r=>r.broken.length))process.exitCode=1;
