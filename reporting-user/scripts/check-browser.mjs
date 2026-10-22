@@ -1,0 +1,35 @@
+import { chromium } from '@playwright/test';
+import { mkdirSync, readdirSync, statSync } from 'node:fs';
+const browser = await chromium.launch({ headless: true, channel: 'msedge' });
+const page = await browser.newPage({ viewport: { width: 1440, height: 810 } });
+const errors=[];
+page.on('pageerror',e=>errors.push(e.message));
+mkdirSync('artifacts',{recursive:true});
+for(const route of ['dashboard','estates','divisions','observations','comparison','filters','diseases','bottlenecks','freshness','empty','loading','collapsed']) {
+  await page.goto('http://127.0.0.1:5173/#'+route);
+  await page.locator('.design-viewport img').last().waitFor();
+  await page.waitForFunction(()=>[...document.images].every(i=>i.complete));
+  const broken=await page.locator('.design-viewport img').evaluateAll(images=>images.filter(i=>!i.naturalWidth).map(i=>i.src));
+  if(broken.length)throw Error(route+': broken assets '+broken.join(','));
+  await page.screenshot({path:'artifacts/'+route+'.png'});
+}
+await page.goto('http://127.0.0.1:5173/#dashboard');
+await page.locator('[data-name="Nav / Estate Overview"]').click();
+await page.waitForURL('**/#estates');
+await page.locator('[data-name="Nav / Analytics Dashboard"]').click();
+await page.waitForURL('**/#dashboard');
+await page.locator('[data-name="Sidebar collapse toggle"]').click();
+await page.waitForURL('**/#collapsed');
+await page.locator('[data-name="Sidebar collapse toggle"]').click();
+await page.waitForURL('**/#dashboard');
+await page.locator('[data-name="Search"]').click();
+await page.getByPlaceholder('Search reports and filters').fill('disease');
+await page.getByRole('dialog').getByRole('link',{name:'Disease Distribution',exact:true}).click();
+await page.waitForURL('**/#diseases');
+const download=page.waitForEvent('download');
+await page.locator('[data-name="Button / secondary / Export"]').click();
+if(!(await download).suggestedFilename().endsWith('.csv'))throw Error('Missing CSV export');
+if(errors.length)throw Error(errors.join('\n'));
+if(readdirSync('public/assets').some(f=>!statSync('public/assets/'+f).size))throw Error('Empty asset');
+console.log('12 screens, local assets, navigation, sidebar, search and export passed.');
+await browser.close();

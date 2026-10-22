@@ -1,0 +1,21 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1944" height="600" viewBox="0 0 1944 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="plot" clip-path="url(#clip0_0_6)">
+<path id="Vector" d="M0 600H1944" stroke-width="2" stroke="#E1E8E2"/>
+<path id="Vector_2" d="M0 480H1944" stroke-width="2" stroke="#E1E8E2"/>
+<path id="Vector_3" d="M0 360H1944" stroke-width="2" stroke="#E1E8E2"/>
+<path id="Vector_4" d="M0 240H1944" stroke-width="2" stroke="#E1E8E2"/>
+<path id="Vector_5" d="M0 120H1944" stroke-width="2" stroke="#E1E8E2"/>
+<path id="Vector_6" d="M0 0H1944" stroke-width="2" stroke="#E1E8E2"/>
+<path id="Vector_7" d="M243 160L729 120L1215 240L1701 560V600H243V160Z" fill="#2E7D32" fill-opacity="0.12"/>
+<path id="Vector_8" d="M243 160L729 120L1215 240L1701 560" stroke-width="5" stroke="#2E7D32"/>
+<path id="Vector_9" d="M243 168C247.418 168 251 164.418 251 160C251 155.582 247.418 152 243 152C238.582 152 235 155.582 235 160C235 164.418 238.582 168 243 168Z" fill="white" stroke-width="4" stroke="#2E7D32"/>
+<path id="Vector_10" d="M729 128C733.418 128 737 124.418 737 120C737 115.582 733.418 112 729 112C724.582 112 721 115.582 721 120C721 124.418 724.582 128 729 128Z" fill="white" stroke-width="4" stroke="#2E7D32"/>
+<path id="Vector_11" d="M1215 248C1219.42 248 1223 244.418 1223 240C1223 235.582 1219.42 232 1215 232C1210.58 232 1207 235.582 1207 240C1207 244.418 1210.58 248 1215 248Z" fill="white" stroke-width="4" stroke="#2E7D32"/>
+<path id="Vector_12" d="M1701 568C1705.42 568 1709 564.418 1709 560C1709 555.582 1705.42 552 1701 552C1696.58 552 1693 555.582 1693 560C1693 564.418 1696.58 568 1701 568Z" fill="white" stroke-width="4" stroke="#2E7D32"/>
+</g>
+<defs>
+<clipPath id="clip0_0_6">
+<rect width="1944" height="600" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,31 @@
+# Dependencies and generated output
+node_modules/
+dist/
+build/
+artifacts/
+test-results/
+playwright-report/
+*.log
+*.zip
+
+# Local environment and credentials
+.env
+.env.*
+*.env
+*.env.*
+.npmrc
+.netrc
+.aws/
+.ssh/
+credentials.json
+service-account*.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Editor and operating system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
