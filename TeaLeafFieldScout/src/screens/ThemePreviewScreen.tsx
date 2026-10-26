@@ -22,7 +22,9 @@ function ThemePreviewScreen() {
       <ScrollView contentContainerStyle={styles.content}>
         <Text style={typography.headingPage}>Theme preview</Text>
 
-        <Text style={[typography.headingSection, styles.section]}>Type scale</Text>
+        <Text style={[typography.headingSection, styles.section]}>
+          Type scale
+        </Text>
         {Object.entries(typography).map(([name, style]) => (
           <View key={name} style={styles.row}>
             <Text style={typography.caption}>{name}</Text>
@@ -66,7 +68,11 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: colors.border.divider,
   },
-  swatchRow: { flexDirection: 'row', alignItems: 'center', marginBottom: space.inlineGap },
+  swatchRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: space.inlineGap,
+  },
   swatch: {
     width: spacing.s48,
     height: spacing.s32,
@@ -75,7 +81,11 @@ const styles = StyleSheet.create({
     borderColor: colors.border.strong,
     marginRight: space.listItemGap,
   },
-  bar: { height: spacing.s16, backgroundColor: colors.brand.primary, marginRight: space.listItemGap },
+  bar: {
+    height: spacing.s16,
+    backgroundColor: colors.brand.primary,
+    marginRight: space.listItemGap,
+  },
 });
 
 export default ThemePreviewScreen;
