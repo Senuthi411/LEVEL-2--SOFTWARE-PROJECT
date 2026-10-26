@@ -1,6 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useTranslation } from 'react-i18next';
+import LanguagePreviewScreen from '../screens/LanguagePreviewScreen';
 import PlaceholderScreen from '../screens/PlaceholderScreen';
 import { colors, typography } from '../theme';
 import { TabParamList } from './types';
@@ -23,10 +24,11 @@ function RootNavigator() {
         },
       }}
     >
+      {/* TEMPORARY: Home shows the language test screen until the real Home exists. */}
       <Tab.Screen
         name="Home"
         options={{ title: t('tabs.home') }}
-        children={() => <PlaceholderScreen title={t('tabs.home')} />}
+        children={() => <LanguagePreviewScreen />}
       />
       <Tab.Screen
         name="History"

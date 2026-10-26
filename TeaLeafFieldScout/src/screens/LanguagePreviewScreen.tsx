@@ -2,7 +2,7 @@ import React from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
-import { AppLanguage, languages } from '../i18n';
+import { AppLanguage, languages, setAppLanguage } from '../i18n';
 import { colors, controlHeight, radius, space, typography } from '../theme';
 
 // DEV-ONLY: checks Sinhala and Tamil rendering. Remove later.
@@ -27,7 +27,7 @@ function LanguagePreviewScreen() {
   const font = scriptFont[current];
 
   return (
-    <SafeAreaView style={styles.safe}>
+    <SafeAreaView style={styles.safe} edges={['top']}>
       <ScrollView contentContainerStyle={styles.content}>
         <Text style={typography.headingPage}>{t('app.name')}</Text>
         <Text style={[typography.bodyDefault, styles.gap]}>
@@ -42,7 +42,7 @@ function LanguagePreviewScreen() {
                 key={l.code}
                 accessibilityRole="button"
                 accessibilityState={{ selected }}
-                onPress={() => i18n.changeLanguage(l.code)}
+                onPress={() => setAppLanguage(l.code)}
                 style={[styles.chip, selected && styles.chipSelected]}
               >
                 <Text
